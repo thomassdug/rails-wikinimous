@@ -1,0 +1,9 @@
+<h2><%= @article.title  %></h2>
+<p><%= @article.content %></p>
+<p><%= link_to "Back to articles", articles_path, class: "btn btn-primary" %>
+<%= link_to "Update", article_edit_path(@article), class: "btn btn-primary" %>
+<%= link_to "Delete",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            class: "btn btn-primary" %></p>
